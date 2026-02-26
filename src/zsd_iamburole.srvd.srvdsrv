@@ -1,0 +1,4 @@
+@EndUserText.label: 'Business User - Role assignment'
+define service ZSD_IAMBUROLE {
+  expose ZI_IAMBUROLE as ZIAMBURole;
+}

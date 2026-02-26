@@ -1,0 +1,17 @@
+managed implementation in class zbp_i_materialbomitemadd unique;
+strict ( 2 );
+
+define behavior for ZI_MaterialBOMItemAdd //alias <alias_name>
+persistent table ztmatbomitemadd
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly ) BillOfMaterial, BillOfMaterialCategory, BillOfMaterialVariant, BillOfMaterialVersion,
+   BillOfMaterialItemNodeNumber,
+   HeaderChangeDocument,
+   Material, Plant;
+}

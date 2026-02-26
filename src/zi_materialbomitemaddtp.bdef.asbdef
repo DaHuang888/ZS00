@@ -1,0 +1,12 @@
+interface;
+
+define behavior for ZI_MATERIALBOMITEMADDTP alias ZMaterialBOMItemAdd
+{
+  use create;
+  use update;
+  use delete;
+
+  use event Created;
+  use event Changed;
+  use event Deleted;
+}

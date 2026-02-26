@@ -1,0 +1,5 @@
+@EndUserText.label: 'Plant BOM Service Definition'
+define service ZSD_PLANTBOM {
+  expose ZI_PlantBOM     as ZPlantBOM;
+  expose ZI_PlantBOMItem as ZPlantBOMItem;
+}

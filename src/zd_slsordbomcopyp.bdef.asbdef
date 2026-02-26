@@ -1,0 +1,19 @@
+abstract;
+strict ( 2 );
+//定义deep结构，使用deep结果须创建abstract BDEF
+with hierarchy;
+
+define behavior for ZD_SLSORDBOMCOPYP //alias <alias_name>
+//Optional Parameters is active
+with control
+{
+
+//( mandatory : execute ) 定义必输参数字段，也可以应用于关联实体，如association ( mandatory : execute ) _BOMHeaderToItem;
+  field ( mandatory : execute ) BillOfMaterial, BillOfMaterialCategory, BillOfMaterialVariant, EngineeringChangeDocument, Material, Plant;
+  association _BOMHeaderToItem;
+
+}
+
+define behavior for ZD_SLSORDBOMITEMCOPYP //alias <alias_name>
+{
+}

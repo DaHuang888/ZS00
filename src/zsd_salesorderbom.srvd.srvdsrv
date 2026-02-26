@@ -1,0 +1,14 @@
+@EndUserText.label: 'Sales Order BOM Service Definition'
+define service ZSD_SALESORDERBOM {
+  expose ZI_BOMUsageVH          as ZBOMUsage;
+  expose ZI_UnitOfMeasureText   as ZUnitOfMeasureText;
+  expose ZI_SlsOrdBOM           as ZSalesOrderBOM;
+  expose ZI_SlsOrdBOMItem       as ZSalesOrderBOMItem;
+  expose zi_product             as ZProduct;
+  expose zi_productplant        as ZProductPlant;
+  expose ZI_ProductValuation    as ZProductValuation;
+  expose ZI_BomItemCategoryText as ZBOMItemCategoryText;
+  expose ZI_BOMStatusText       as ZBOMStatusText;
+  expose ZI_SlsOrdBOMByMatPlt   as ZSalesOrderBOMByMatPlt;
+  expose ZI_BOMItemBasic        as ZBOMItemBasic;
+}

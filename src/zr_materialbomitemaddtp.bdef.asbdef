@@ -1,0 +1,32 @@
+managed with additional save with full data
+implementation in class zcl_materialbomitemadd unique;
+strict ( 2 );
+
+define behavior for ZR_MaterialBOMItemAddTP alias ZMaterialBOMItemAdd
+persistent table ztmatbomitemadd
+lock master
+authorization master ( instance )
+etag master LocalLastChangedAt
+
+{
+  create ( authorization : global );
+  update;
+  delete;
+
+  field ( mandatory: create, readonly: update )
+  BillOfMaterial,
+  BillOfMaterialCategory,
+  BillOfMaterialVariant,
+  //BillOfMaterialVersion,
+  BillOfMaterialItemNodeNumber,
+  //HeaderChangeDocument,
+  Material,
+  Plant;
+
+  field ( readonly ) CreatedAt, CreatedBy, LastChangedAt, LastChangedBy, LocalLastChangedAt;
+
+  event Created;
+  event Changed;
+  event Deleted parameter ZD_MaterialBOMItemDeleted;
+
+}

@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Sales Order BOM",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Sales Order BOM"
+  },
+  "ui5AppDetails": {
+    "appId": "salesorderbom"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_D6A3664C993AF142205D68CA13B234117919C25A_TM",
+    "semanticObject": "SalesOrderBom",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_D6A3664C993AF142205D68CA13B234117919C25A_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Sales Order BOM"
+      }
+    }
+  ]
+}

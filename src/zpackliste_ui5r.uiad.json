@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "一款SAP Fiori应用。",
+    "originalLanguage": "zh",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "打印装箱捡配单"
+  },
+  "ui5AppDetails": {
+    "appId": "zpackliste"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_84423224850815BA144CA9DE1110B779E64062AA_TM",
+    "semanticObject": "zpackliste",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_84423224850815BA144CA9DE1110B779E64062AA_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "打印装箱捡配单",
+        "subtitle": "打印装箱捡配单"
+      }
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+@Metadata.layer: #CUSTOMER
+annotate entity ZI_SlsOrdBOMItem with
+{
+  @EndUserText.label: 'Material Number'
+  Material;
+}

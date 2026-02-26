@@ -1,0 +1,4 @@
+@EndUserText.label: 'BOM Item Additional Service Definition'
+define service ZSD_MATERIALBOMITEMADD {
+  expose ZI_MaterialBOMItemAdd as ZMaterialBOMItemAdd;
+}

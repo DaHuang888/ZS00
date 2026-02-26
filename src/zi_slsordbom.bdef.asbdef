@@ -1,0 +1,37 @@
+unmanaged implementation in class zcl_bhv_slsordbom unique;
+strict ( 2 );
+
+define behavior for ZI_SlsOrdBOM alias ZSalesOrderBOM
+//persistent table <???>
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+
+  static action ( authorization : none ) CopyBOM deep parameter ZD_SLSORDBOMCOPYR deep result [0..*] ZD_SLSORDBOMCOPYR external 'ZSlsOrdBOMCopyResultType';
+
+  function ( authorization : none ) ExplodeBOM parameter ZD_SLSORDBOMExplodeBOMP result [0..*] ZD_SLSORDBOMExplodeBOMR external 'ZSlsOrdBOMExplodeBOMResultType';
+
+  field ( readonly ) Material, Plant, BillOfMaterialVariantUsage, BillOfMaterialVariant, SalesOrder,
+                     SalesOrderItem;
+
+  association _SlsOrdBOMItm { create; }
+}
+
+define behavior for ZI_SlsOrdBOMItem alias ZSalesOrderBOMItem
+//persistent table <???>
+lock dependent by _SlsOrdBOM
+authorization dependent by _SlsOrdBOM
+//etag master <field_name>
+{
+  update;
+  delete;
+
+  field ( readonly ) Material, Plant, BillOfMaterialVariantUsage, SalesOrder, SalesOrderItem,
+                     BillOfMaterialVariant, BillOfMaterialItemNodeNumber;
+
+  association _SlsOrdBOM;
+}

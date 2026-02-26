@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Plant BOM",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "工厂BOM"
+  },
+  "ui5AppDetails": {
+    "appId": "zplantbom01"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_B74B85939BC60D0FF8E939E7FD124119945A2574_TM",
+    "semanticObject": "zplantbom01",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_B74B85939BC60D0FF8E939E7FD124119945A2574_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "工厂BOM"
+      }
+    }
+  ]
+}

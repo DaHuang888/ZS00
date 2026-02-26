@@ -1,0 +1,29 @@
+unmanaged implementation in class zcl_bhv_plantbom unique;
+strict ( 2 );
+
+define behavior for ZI_PlantBOM alias ZPlantBOM
+//late numbering
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly ) Material, Plant, BillOfMaterialVariant, BillOfMaterialVariantUsage;
+  association _PlantBOMItem { create; }
+
+  static function ( authorization : none ) ExplodeBOM parameter ZD_PlantBOMExplodeBOMP result [0..*] ZD_PlantBOMExplodeBOMR external 'ZPlantBOMExplodeBOMResultType';
+}
+
+define behavior for ZI_PlantBOMItem alias ZPlantBOMItem
+//late numbering
+lock dependent by _PlantBOM
+authorization dependent by _PlantBOM
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) Material, Plant, BillOfMaterialVariantUsage, BillOfMaterialVariant, BillOfMaterialItemNodeNumber;
+  association _PlantBOM;
+}

@@ -1,0 +1,14 @@
+abstract;
+strict ( 2 );
+with hierarchy;
+
+define behavior for ZD_SLSORDBOMCOPYR //alias <alias_name>
+with control
+{
+    association _BOMHeaderToItem;
+}
+
+define behavior for ZD_SLSORDBOMITEMCOPYR //alias <alias_name>
+with control
+{
+}
