@@ -142,9 +142,11 @@ CLASS ZCL_RUN_ADT IMPLEMENTATION.
         FAILED DATA(ls_failed_c)
         REPORTED DATA(ls_reported_c).
 
-   if ls_failed_c is INITIAL.
-    COMMIT ENTITIES.
-   ENDIF.
+        IF ls_failed_c IS INITIAL.
+          COMMIT ENTITIES.
+        ELSE.
+          out->write( |Update of BOM items failed, no commit executed.| ).
+        ENDIF.
 
 
 *    MODIFY ENTITIES OF I_ProjectDemandTP_2   PRIVILEGED
